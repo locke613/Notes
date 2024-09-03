@@ -22,7 +22,8 @@ def final_dag_test():
         print("dates_str: " + dates_str)
         # Split the string by commas and convert the elements to integers
         marks_list = [int(x) for x in marks_str.split(',') if x.strip().isdigit()]
-        dates_list = [int(x) for x in dates_str.split(',') if x.strip().isdigit()]
+        dates_list = [x for x in dates_str.split(',')]
+        dates_list.sort()
 
         param_list = []
         for index, element in enumerate(dates_list):
